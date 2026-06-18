@@ -1192,7 +1192,7 @@ def anthropic_prompt_cache_policy(
     model_lower = eff_model.lower()
     provider_lower = eff_provider.lower()
     is_claude = "claude" in model_lower
-    is_openrouter = base_url_host_matches(eff_base_url, "openrouter.ai") or base_url_host_matches(eff_base_url, "api.pumpapi.ai")
+    is_openrouter = base_url_host_matches(eff_base_url, "openrouter.ai")
     # Nous Portal proxies to OpenRouter behind the scenes — identical
     # OpenAI-wire envelope cache_control semantics. Treat it as an
     # OpenRouter-equivalent endpoint for caching layout purposes.
